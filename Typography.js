@@ -28,7 +28,8 @@ declare module "@material-ui/core/Typography" {
       | "colorSecondary"
       | "colorTextSecondary";
 
-    declare export type TypographyProps = StandardProps<React$ElementProps<HTMLElement>, TypographyClassKey> & {
+    // React$ElementProps<typeof HTMLDivElement>
+    declare export type TypographyProps = StandardProps<{}, TypographyClassKey> & {
         align?: Alignment;
         color?: Color | "textSecondary" | "error";
         component?: React$ComponentType<TypographyProps>;

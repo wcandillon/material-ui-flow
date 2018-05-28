@@ -25,7 +25,8 @@ declare module "@material-ui/core/styles/withStyles" {
         innerRef?: React$Ref<any>
     };
 
-    declare export type StandardProps<C, ClassKey: string> = StyledComponentProps<ClassKey> & C & {
+    // & C
+    declare export type StandardProps<C, ClassKey: string> = StyledComponentProps<ClassKey> & {
         className?: string,
         style?: $Shape<CSSProperties<*>>
     };
@@ -33,5 +34,5 @@ declare module "@material-ui/core/styles/withStyles" {
     declare module.exports: <ClassKey: string, Props: {}, Comp: React$ComponentType<Props>>(
         style: StyleRules<ClassKey> | StyleRulesCallback<ClassKey>,
         options?: WithStylesOptions
-    ) => (C: Comp) => React$ComponentType<$Diff<React$ElementConfig<Comp>, WithStyles<ClassKey>>>;
+    ) => (C: Comp) => Class<React$Component<$Diff<React$ElementConfig<Comp>, WithStyles<ClassKey>>>>;
 }

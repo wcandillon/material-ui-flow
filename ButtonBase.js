@@ -10,7 +10,8 @@ declare module "@material-ui/core/ButtonBase" {
         focusVisible: () => void
     };
 
-    declare export type ButtonBaseProps = StandardProps<React$ElementProps<HTMLAnchorElement> & React$ElementProps<HTMLButtonElement>, ButtonBaseClassKey> & {
+    // React$ElementProps<HTMLAnchorElement> & React$ElementProps<HTMLButtonElement>
+    declare export type ButtonBaseProps = StandardProps<{}, ButtonBaseClassKey> & {
         action?: (actions: ButtonBaseActions) => void,
         buttonRef?: React$Ref<any>,
         centerRipple?: boolean,

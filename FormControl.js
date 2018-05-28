@@ -6,7 +6,8 @@ declare module "@material-ui/core/FormControl" {
 
     declare export type FormControlClassKey = "root" | "marginNormal" | "marginDense" | "fullWidth";
 
-    declare export type FormControlProps = StandardProps<React$ElementProps<HTMLDivElement>, FormControlClassKey> & {
+    // React$ElementProps<HTMLDivElement>
+    declare export type FormControlProps = StandardProps<{}, FormControlClassKey> & {
         component?: React$ComponentType<FormControlProps>,
         disabled?: boolean,
         error?: boolean,

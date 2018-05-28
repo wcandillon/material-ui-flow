@@ -5,7 +5,8 @@ declare module "@material-ui/core/CardContent" {
 
     declare export type CardContentClassKey = "root";
 
-    declare export type CardContentProps = StandardProps<React$ElementProps<HTMLDivElement>, CardContentClassKey>;
+    // React$ElementProps<HTMLDivElement>
+    declare export type CardContentProps = StandardProps<{}, CardContentClassKey>;
 
     declare type CardContent = React$ComponentType<CardContentProps>;
 

@@ -5,7 +5,8 @@ declare module "@material-ui/core/CardActions" {
 
     declare export type CardActionsClassKey = "root" | "action";
 
-    declare export type CardActionsProps = StandardProps<React$ElementProps<HTMLDivElement>, CardActionsClassKey> & {
+    // React$ElementProps<HTMLDivElement>
+    declare export type CardActionsProps = StandardProps<{}, CardActionsClassKey> & {
         disableActionSpacing?: boolean
     };
 
