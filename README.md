@@ -15,15 +15,3 @@ React.HTMLAttributes<HTMLElement>
 ```
 
 translate in Flow? 🤔
-
-### 2
-
-What is the TS equivalent of `Record` in Flow?
-
-Assume I have the following type:
-
-```js
-type ClassNames = "container" | "form";
-```
-
-How do I express the object type that contains exactly the property `container` and `form`?
