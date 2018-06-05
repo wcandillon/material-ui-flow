@@ -5,8 +5,9 @@ declare module "@material-ui/core/styles/withStyles" {
     import type {WithTheme} from "@material-ui/core/styles/withTheme";
     import type {Theme} from "@material-ui/core/styles/createMuiTheme";
 
-    declare type StyleRules<ClassKey: string> = { [className: ClassKey]: $Exact<CSSProperties<number>> };
-    declare type StyleRulesCallback<ClassKey: string> = (theme: Theme) => StyleRules<ClassKey>;
+    declare type Record<K, V> = { [K]: V };
+    declare type StyleRules<ClassKey: string> = Record<ClassKey, CSSProperties<number>>;
+    declare export type StyleRulesCallback<ClassKey: string> = (theme: Theme) => StyleRules<ClassKey>;
 
     declare type WithStylesOptions = {
       flip?: boolean,
@@ -14,7 +15,7 @@ declare module "@material-ui/core/styles/withStyles" {
       name?: string
     };
 
-    declare export type ClassNameMap<ClassKey: string = string> = { [key: ClassKey]: string };
+    declare export type ClassNameMap<ClassKey: string = string> = Record<ClassKey, string>;
 
     declare export type WithStyles<ClassKey: string = string> = $Shape<WithTheme> & {
         classes: ClassNameMap<ClassKey>
